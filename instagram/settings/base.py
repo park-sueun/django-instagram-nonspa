@@ -44,6 +44,7 @@ DJANGO_APPS = [
 
 THIRDPARTY_APPS = [
     "debug_toolbar",
+    "django_bootstrap5",
 ]
 
 LOCAL_APPS = [
