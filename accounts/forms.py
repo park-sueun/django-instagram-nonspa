@@ -1,5 +1,5 @@
 from django.contrib.auth.forms import UserCreationForm
-from django.forms import ValidationError
+from django.forms import ValidationError, ModelForm
 from .models import User
 
 class SignupForm(UserCreationForm):
@@ -19,3 +19,10 @@ class SignupForm(UserCreationForm):
                 raise ValidationError("이미 등록된 이메일 주소입니다.")
         
         return email
+    
+class ProfileForm(ModelForm):
+    class Meta:
+        model = User
+        fields = (
+            'first_name', 'last_name', 'website_url', 'bio'
+        )
