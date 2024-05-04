@@ -49,6 +49,7 @@ THIRDPARTY_APPS = [
 
 LOCAL_APPS = [
     'accounts',
+    'posts',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRDPARTY_APPS + LOCAL_APPS

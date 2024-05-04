@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
+    path('', include('posts.urls')),
     path('', login_required(TemplateView.as_view(template_name='root.html')), name='root'),
 ]
 
